@@ -1,1 +1,1 @@
-Simple HWID writted in Java using MD5 Encryption and 
+Simple HWID writted in Java collecting personal (or unique) data from the PC using MD5 Encryption.
