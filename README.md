@@ -1,1 +1,1 @@
-README.
+Simple HWID writted in Java using MD5 Encryption and 

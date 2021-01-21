@@ -12,9 +12,9 @@ public class Main {
     public static byte[] showHWID() {
         try {
             MessageDigest myHWID = MessageDigest.getInstance("MD5");
-            return myHWID.digest(Utils.all_identifiers.getBytes());
+            return myHWID.digest(Utils.identifiers().getBytes());
         } catch (Exception e) {
-            System.out.println("[myHWID] A error has been generated, please report: ");
+            System.out.println("[myHWID] A error has been generated, please report:");
             System.out.println(e);
         }
 		return null;

@@ -8,20 +8,18 @@ public class Utils {
     public static String os_version = System.getProperty("os.version");
     public static String os_arch = System.getProperty("os.arch");
     public static int processors = Runtime.getRuntime().availableProcessors();
-	
-	public static String all_identifiers =  os_name + 
-											os_version + 
-											os_arch + 
-											pr_architecture + 
-											pr_identifier + 
-											processors;
+    
+    public static String identifiers() {
+        String identifiers = os_name + os_arch + os_version + pr_architecture + pr_identifier + processors;
+        return identifiers;
+    }
 	
     public static String byteHWIDtoString(byte[] byteHWID) {
         char[] lenghtChars = new char[byteHWID.length * 2];
         for (int i = 0; i < byteHWID.length; i++) {
             int v = byteHWID[i] & 0xFF;
-            lenghtChars[i * 2] = "0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz".toCharArray()[v >>> 3];
-            lenghtChars[i * 2 + 1] = "0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz".toCharArray()[v & 0x1F];
+            lenghtChars[i * 2] = "0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyzñ".toCharArray()[v >>> 3];
+            lenghtChars[i * 2 + 1] = "0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyzñ".toCharArray()[v & 0x1F];
         }
         return new String(lenghtChars);
     }
