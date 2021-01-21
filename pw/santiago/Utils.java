@@ -18,8 +18,8 @@ public class Utils {
         char[] lenghtChars = new char[byteHWID.length * 2];
         for (int i = 0; i < byteHWID.length; i++) {
             int v = byteHWID[i] & 0xFF;
-            lenghtChars[i * 2] = "0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyzñ".toCharArray()[v >>> 3];
-            lenghtChars[i * 2 + 1] = "0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyzñ".toCharArray()[v & 0x1F];
+            lenghtChars[i * 2] = "0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz".toCharArray()[v >>> 3];
+            lenghtChars[i * 2 + 1] = "0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz".toCharArray()[v & 0x1F];
         }
         return new String(lenghtChars);
     }
