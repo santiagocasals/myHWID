@@ -1,15 +1,14 @@
 package pw.santiago;
 
 public class Utils {
-	
-    public static String pr_architecture = System.getenv("processor_architecture");
-    public static String pr_identifier = System.getenv("processor_identifier");
-    public static String os_name = System.getProperty("os.name");
-    public static String os_version = System.getProperty("os.version");
-    public static String os_arch = System.getProperty("os.arch");
-    public static int processors = Runtime.getRuntime().availableProcessors();
     
     public static String identifiers() {
+        String pr_architecture = System.getenv("processor_architecture");
+        String pr_identifier = System.getenv("processor_identifier");
+        String os_name = System.getProperty("os.name");
+        String os_version = System.getProperty("os.version");
+        String os_arch = System.getProperty("os.arch");
+        int processors = Runtime.getRuntime().availableProcessors();
         String identifiers = os_name + os_arch + os_version + pr_architecture + pr_identifier + processors;
         return identifiers;
     }
